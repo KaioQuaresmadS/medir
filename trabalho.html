@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medir</title>
+
+</head>
+    <style>
+
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color: #1ABD97;
+    color: white;
+}
+header {
+    padding: 10px;
+    margin: 0px;
+    background-color: #23FCCA;
+    color: black;
+    text-align: center
+}
+#oi {
+    padding: 0px;
+    bottom: 0;
+    position: fixed;
+    height: 88%;
+    width: 100%;
+}
+.eu {
+    padding: 50px 0;
+    text-align: center;
+    color: #6ee66e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+}
+article{
+    padding: 25px;
+    margin: 10px;
+    width: 100%;
+}
+
+nav {
+    padding: 20px;
+    width: 50%;
+    display: inline;
+}
+.links {
+    background-color:#000a7d8e;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px 5px;
+}
+footer {
+    color: white;
+    background-color: #000B7D;
+    width: 100%;
+    bottom: 0;
+    height: 2%;
+    position: fixed;
+    text-align: center;
+}
+a, ul {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+.oi {
+    background-color: #F2CB05;
+}
+.youtube {
+    float: left;
+    display: inline;
+    background-color: #F2CB05;
+}
+.oi ul ul {
+        display: none;
+        float: left;
+        position: absolute;
+}
+.oi ul li:hover ul {
+        display: block;
+        background-color: #F2CB05;
+}
+@media (max-width: 425px){
+    .oi ul ul {
+            display: none;
+            float: left;
+            position: absolute;
+        }
+        .oi ul li:hover ul {
+            display: block;
+            background-color: #F2CB05;
+        }
+        
+        .oi ul ul {
+            width: 150px;
+        }
+        .oi ul ul li a {
+            display: block;
+        }
+        nav,
+        article,
+        .coluna {
+        width: 100%;
+        min-width: 320px;
+    }
+}
+    </style>
+    <header>
+        <h1>Projeto Medir</h1>
+        
+    </header>
+    <section>
+        <nav>
+            <div class="oi">
+                <ul>
+                    <li><a href="#">Referências</a>
+                        <ul>
+                            <li class="youtube"><a href="https://www.youtube.com/watch?v=wFvarCF_G6M" target="_blank">Video explicando</a></li>
+                            <li><a href="https://www.filipeflop.com/blog/medidor-de-energia-eletrica-com-arduino/" target="_blank">Filipeflop</a></li>
+                            <li><a href="https://blog.eletrogate.com/medidor-de-corrente-e-energia-com-arduino-sensor-de-corrente-e-tensao/" target="_blank">Eletrogate</a></li>
+                            <li><a href="https://blog.fazedores.com/construindo-um-medidor-de-consumo-de-energia-eletrica-com-arduino/" target="_blank">Fazedores</a></li>
+                        </ul>
+                    </li>    
+                </ul>
+            </div>
+        </nav>
+        <article>
+            <div id="sobre">
+                <h2 class="texto">Sobre a iniciativa</h2>
+                <p>O projeto vem de uma ideia, onde o real objetivo é ajudar consumidores de energia elétrica a diminuir o uso, uma vez que o consumo excessivo está fazendo que o consumidor gaste mais, às vezes com uma ferramenta simples, de fácil manuseio, e praticidade faça com que ele ajuste a de uma forma que fique rentável para ele e que diminua o consumo, fazendo com que as hidrelétricas trabalhem menos e assim ajudando o meio ambiente e reduzindo o valor no bolso dos consumidores.</p>
+            </div>   
+            <div id="pratica">
+                <h2>Colocando em prática</h2>
+                <p>Existem vários exemplos de uso de sensores da série SCT-013 (ficha técnica) com um Arduino. Também há muita discussão sobre isso, pois encontramos vários circuitos e cálculos diferentes que levam em consideração a resistência interna do dispositivo, o comprimento de onda do sinal e muitas outras variáveis.
+
+                    Vamos mostrar aqui um método resumido de como fazer um medidor de energia com um arduino, que em nossos testes chegou bem próximo dos cálculos que fizemos usando a fórmula I = P/E mostrada acima.
+                    
+                    Montamos o circuito usando os seguintes materiais (resistores, capacitores, displays e potenciômetros e amperímetros). Verifique a lista completa:<br>
+                    01 – Cabo USB<br>
+                    01 – Fonte 9V 1A Plug P4<br>
+                    01 – Sensor de Corrente Não Invasivo SCT-013 20A<br>
+                    01 – Display LCD 16×2 Backlight Azul<br>
+                    01 – Barra de Pinos 1×40 180 Graus<br>
+                    01 – Protoboard 830 pontos<br>
+                    01 – Potenciômetro Trimpot 10K<br>
+                    20 – Resistor 10K 1/4W<br>
+                    05 – Capacitor 100µF 16V<br>
+                    65 – Jumpers Macho-Macho<br>
+                    01 – Fio Paralelo 1,0mm 1m<br>
+                    01 – Plug Tomada Macho<br>
+                    01 – Plug Tomada Fêmea<br>
+                    01 – Conector Audio Jack 3,5mm<br>
+                </p>
+            </div><br>
+            <a href="https://www.filipeflop.com/wp-content/uploads/2015/02/Circuito-Arduino-Uno-SCT-01311.png" target="_blank">
+                <div class="arduino">                    
+                <img src="https://www.filipeflop.com/wp-content/uploads/2015/02/Circuito-Arduino-Uno-SCT-01311.png" alt="Arduino" width="100%">
+                </div>
+             </a>   
+        </article>
+    </section>
+    <footer>      
+        <p class="eu">Desenvolvido por Kaio Quaresma 3 REG-1</p>       
+    </footer>
+</body>
+</html>
